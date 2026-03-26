@@ -31,8 +31,13 @@
   border: 0px;
   display: flex;
   justify-content: center;
-  align-items: center
-            }
+  align-items: center;
+  color: var(--textColor);
+}
+
+#silktide-wrapper p {
+  color: var(--textColor);
+}
 
 /* Backdrop (Global) */
 #silktide-backdrop-global {
