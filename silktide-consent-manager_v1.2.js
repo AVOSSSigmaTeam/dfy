@@ -414,22 +414,12 @@ class SilktideCookieBanner {
     // Reject button
     const rejectNonEssentialButtonText = this.config.text?.banner?.rejectNonEssentialButtonText || 'Reject non-essential';
     const rejectNonEssentialButtonLabel = this.config.text?.banner?.rejectNonEssentialButtonAccessibleLabel;
-    const rejectNonEssentialButton = `<button class="preferences-reject-all st-button st-button--primary"${
+    const rejectNonEssentialButton = `<button class="preferences-reject-all st-button st-button--secondary"${
       rejectNonEssentialButtonLabel && rejectNonEssentialButtonLabel !== rejectNonEssentialButtonText 
         ? ` aria-label="${rejectNonEssentialButtonLabel}"` 
         : ''
     }>${rejectNonEssentialButtonText}</button>`;
-    
-    // Credit link
-    // const creditLinkText = this.config.text?.preferences?.creditLinkText || 'Get this banner for free';
-    // const creditLinkAccessibleLabel = this.config.text?.preferences?.creditLinkAccessibleLabel;
-    // const creditLink = `<a href="https://silktide.com/consent-manager" target="_blank" rel="noreferrer"${
-    //   creditLinkAccessibleLabel && creditLinkAccessibleLabel !== creditLinkText
-    //     ? ` aria-label="${creditLinkAccessibleLabel}"`
-    //     : ''
-    // }>${creditLinkText}</a>`;
-    
-    
+  
 
     const modalContent = `
       <header>
@@ -474,8 +464,8 @@ class SilktideCookieBanner {
           .join('')}
       </section>
       <footer>
-        ${acceptAllButton}
         ${rejectNonEssentialButton}
+        ${acceptAllButton}
       </footer>
     `;
 
