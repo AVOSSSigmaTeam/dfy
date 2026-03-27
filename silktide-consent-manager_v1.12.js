@@ -409,55 +409,6 @@ class SilktideCookieBanner {
     }>${saveOptionsButtonText}</button>`;
   
 
-    // const modalContent = `
-    //   <header>
-    //     <h2>${preferencesTitle}</h2>                    
-    //     ${closeModalButton}
-    //   </header>
-    //   ${preferencesDescription}
-    //   <section id="cookie-preferences">
-    //     ${cookieTypes
-    //       .map((type) => {
-    //         const accepted = acceptedCookieMap[type.id];
-    //         let isChecked = false;
-
-    //         // if it's accepted then show as checked
-    //         if (accepted) {
-    //           isChecked = true;
-    //         }
-
-    //         // if nothing has been accepted / rejected yet, then show as checked if the default value is true
-    //         if (!accepted && !this.hasSetInitialCookieChoices()) {
-    //           isChecked = type.defaultValue;
-    //         }
-
-    //         return `
-    //         <fieldset>
-    //             <legend>${type.name}</legend>
-    //             <div class="cookie-type-content">
-    //                 <div class="cookie-type-description">${type.description}</div>
-    //                 <label class="switch" for="cookies-${type.id}">
-    //                     <input type="checkbox" id="cookies-${type.id}" ${
-    //           type.required ? 'checked disabled' : isChecked ? 'checked' : ''
-    //         } />
-    //                     <span class="switch__pill" aria-hidden="true"></span>
-    //                     <span class="switch__dot" aria-hidden="true"></span>
-    //                     <span class="switch__off" aria-hidden="true">Off</span>
-    //                     <span class="switch__on" aria-hidden="true">On</span>
-    //                 </label>
-    //             </div>
-    //         </fieldset>
-    //     `;
-    //       })
-    //       .join('')}
-    //   </section>
-    //   <footer>
-    //     ${saveOptionsButton}
-    //     ${rejectNonEssentialButton}
-    //     ${acceptAllButton}
-    //   </footer>
-    // `;
-
     const modalContent = `
       <header>
         <h2>${preferencesTitle}</h2>                    
@@ -468,17 +419,16 @@ class SilktideCookieBanner {
         ${cookieTypes
           .map((type) => {
             const accepted = acceptedCookieMap[type.id];
-            let isChecked;
+            let isChecked = false;
 
-            if (accepted === true) {
+            // if it's accepted then show as checked
+            if (accepted) {
               isChecked = true;
-            } else if (accepted === false) {
-              isChecked = false;
-            } else {
-              // not set yet → default to ON
-              isChecked = this.hasSetInitialCookieChoices()
-                ? false
-                : true; // 🔥 force ON by default
+            }
+
+            // if nothing has been accepted / rejected yet, then show as checked if the default value is true
+            if (!accepted && !this.hasSetInitialCookieChoices()) {
+              isChecked = type.defaultValue;
             }
 
             return `
@@ -488,11 +438,7 @@ class SilktideCookieBanner {
                     <div class="cookie-type-description">${type.description}</div>
                     <label class="switch" for="cookies-${type.id}">
                         <input type="checkbox" id="cookies-${type.id}" ${
-              type.required
-                ? 'checked disabled'
-                : isChecked
-                ? 'checked'
-                : ''
+              type.required ? 'checked disabled' : isChecked ? 'checked' : ''
             } />
                         <span class="switch__pill" aria-hidden="true"></span>
                         <span class="switch__dot" aria-hidden="true"></span>
@@ -501,7 +447,7 @@ class SilktideCookieBanner {
                     </label>
                 </div>
             </fieldset>
-          `;
+        `;
           })
           .join('')}
       </section>
