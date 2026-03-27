@@ -796,16 +796,18 @@ class SilktideCookieBanner {
   }
 
   preventBodyScroll() {
-    document.body.style.overflow = 'hidden';
-    // Prevent iOS Safari scrolling
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
+    // document.body.style.overflow = 'hidden';
+    // // Prevent iOS Safari scrolling
+    // document.body.style.position = 'fixed';
+    // document.body.style.width = '100%';
+    lenis.stop();
   }
 
   allowBodyScroll() {
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
+    // document.body.style.overflow = '';
+    // document.body.style.position = '';
+    // document.body.style.width = '';
+    lenis.start();
   }
 }
 
