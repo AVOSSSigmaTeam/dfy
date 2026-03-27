@@ -399,7 +399,7 @@ class SilktideCookieBanner {
     }>${rejectNonEssentialButtonText}</button>`;
 
     // Save Options
-    const saveOptionsButtonText = this.config.text?.banner?.saveOptionsButtonText || 'Reject non-essential';
+    const saveOptionsButtonText = this.config.text?.banner?.saveOptionsButtonText || 'Save selected options';
     const saveOptionsButtonLabel = this.config.text?.banner?.saveOptionsButtonAccessibleLabel;
     const saveOptionsButton = `<button class="preferences-save-options st-button st-button--secondary"${
       saveOptionsButtonLabel && saveOptionsButtonLabel !== saveOptionsButtonText 
