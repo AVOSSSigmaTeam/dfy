@@ -99,6 +99,8 @@
   line-height: 1.4;
   cursor: pointer;
   border-radius: 128px;
+  box-shadow: rgba(32, 32, 32, 0) 0px 100px 0px 0px inset;
+  transition: box-shadow .2s;
 }
 
 #silktide-wrapper .st-button--primary {
@@ -107,16 +109,19 @@
 #silktide-wrapper .st-button--primary:hover {
   background-color: var(--backgroundColor);
   color: var(--primaryColor);
+  box-shadow: rgba(32, 32, 32, 0.1) 0px 100px 0px 0px inset;
 }
 
 #silktide-wrapper .st-button--secondary {
   background-color: var(--light);
+  border: 1px solid var(--light);
   color: black;
 }
 
 #silktide-wrapper .st-button--secondary:hover {
   /* background-color: var(--primaryColor);
   color: var(--backgroundColor); */
+  box-shadow: rgba(32, 32, 32, 0.1) 0px 100px 0px 0px inset;
 }
 
 /* --------------------------------
