@@ -478,8 +478,8 @@ class SilktideCookieBanner {
       this.preventBodyScroll();
 
       // Focus the close button
-      const modalCloseButton = this.modal.querySelector('.modal-close');
-      modalCloseButton.focus();
+      // const modalCloseButton = this.modal.querySelector('.modal-close');
+      // modalCloseButton.focus();
 
       // Trigger optional onPreferencesOpen callback
       if (typeof this.config.onPreferencesOpen === 'function') {
@@ -640,9 +640,9 @@ class SilktideCookieBanner {
       });
 
       // Set initial focus
-      if (this.config.mode !== 'wizard') {
-        acceptButton?.focus();
-      }
+      // if (this.config.mode !== 'wizard') {
+      //   acceptButton?.focus();
+      // }
     }
 
     // Check Modal exists before trying to add event listeners
