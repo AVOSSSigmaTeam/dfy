@@ -89,15 +89,16 @@
 #silktide-wrapper .st-button {
   color: var(--backgroundColor);
   background-color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  padding: 10px 20px;
+  border: 1px solid var(--primaryColor);
+  padding: 13px 44px;
   text-decoration: none;
   text-align: center;
   display: inline-block;
   font-size: 16px;
-  line-height: 24px;
+  font-weight: 600;
+  line-height: 1.4;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 128px;
 }
 
 #silktide-wrapper .st-button--primary {
@@ -126,7 +127,7 @@
   color: var(--textColor);
   background-color: var(--backgroundColor);
   box-sizing: border-box;
-  padding: 32px;
+  padding: 16px;
   border-radius: 5px;
   pointer-events: auto;
   border: 0px;
@@ -268,7 +269,7 @@
   font-family: var(--fontFamily);
   color: var(--textColor);
   flex-direction: column;
-  padding: 30px;
+  padding: 16px;
   background-color: var(--backgroundColor);
   border-radius: 5px;
   box-sizing: border-box;
@@ -340,7 +341,7 @@
 #silktide-modal fieldset {
   padding: 0px;
   border: none;
-  margin: 0px 0px 32px;
+  margin: 0px 0px 24px;
 }
 
 #silktide-modal fieldset:last-of-type {
