@@ -75,7 +75,7 @@
 #silktide-wrapper #silktide-cookie-icon:focus {
   outline: none;
   box-shadow: var(--focus);
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 #silktide-wrapper #silktide-cookie-icon:focus {
@@ -110,13 +110,13 @@
 }
 
 #silktide-wrapper .st-button--secondary {
-  background-color: var(--backgroundColor);
-  color: var(--primaryColor);
+  background-color: var(--light);
+  color: black;
 }
 
 #silktide-wrapper .st-button--secondary:hover {
-  background-color: var(--primaryColor);
-  color: var(--backgroundColor);
+  /* background-color: var(--primaryColor);
+  color: var(--backgroundColor); */
 }
 
 /* --------------------------------
@@ -128,9 +128,9 @@
   background-color: var(--backgroundColor);
   box-sizing: border-box;
   padding: 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   pointer-events: auto;
-  border: 0px;
+  border: 1px solid var(--primaryColor);
   position: fixed;
   bottom: 16px;
   right: 16px;
@@ -261,7 +261,7 @@
   width: 800px;
   max-width: 100%;
   max-height: 100%;
-  border: 0px;
+  border: 1px solid var(--primaryColor);
   transform: translate(0px, -20px);
   opacity: 0;
   animation: silktide-slideInUp-center 350ms ease-out forwards;
@@ -271,7 +271,7 @@
   flex-direction: column;
   padding: 16px;
   background-color: var(--backgroundColor);
-  border-radius: 5px;
+  border-radius: 12px;
   box-sizing: border-box;
 }
 
@@ -461,6 +461,7 @@
   flex-direction: column;
   gap: 16px;
   margin-top: 24px;
+  justify-content: flex-end;
 }
 
 @media (min-width: 600px) {
